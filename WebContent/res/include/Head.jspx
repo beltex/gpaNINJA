@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0"
+          xmlns:c="http://java.sun.com/jsp/jstl/core"
+          xmlns:fn="http://java.sun.com/jsp/jstl/functions">
+<jsp:directive.page contentType="text/html; charset=utf-8"
+                    pageEncoding="utf-8" session="true"/>
+<jsp:output doctype-root-element="html"
+            doctype-public="-//W3C//DTD XHTML 1.0 Transitional//EN"
+            doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
+            omit-xml-declaration="true"/>
+
+<head>
+  <meta charset="utf-8"></meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+
+  <c:choose>
+    <c:when test = "${student.name != null}">
+         <title>gpaNINJA // ${student.name}</title>
+      </c:when>
+      <c:otherwise>
+        <title>gpaNINJA</title>
+     </c:otherwise>
+  </c:choose>
+
+  <!-- Bootstrap core CSS - MUST COME BEFORE gpaNINJA.css -->
+  <link href="${pageContext.request.contextPath}/res/bootstrap3.0.3/dist/css/bootstrap.css" rel="stylesheet"></link>
+  <!-- gpaNINJA custom CSS -->
+  <link href="${pageContext.request.contextPath}/res/gpaNINJA.css" rel="stylesheet"></link>
+</head>
+
+</jsp:root>
