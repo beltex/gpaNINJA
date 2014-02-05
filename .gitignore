@@ -1,6 +1,9 @@
 # General purpose .gitignore file
 # Modified from Twitter Bootstrap
 
+# Gradle
+.gradle/
+
 # Java
 *.class
 
