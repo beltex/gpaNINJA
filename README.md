@@ -4,7 +4,7 @@ gpaNINJA
 ### What
 
 An automatic GPA calculator for York University. Takes student credentials 
-(Passport York ID) to pull transcript from school server, automatically 
+(Passport York ID) to scrape transcript from school server, automatically 
 computing GPA in one click for a seamless UX. Provides additional stats such 
 as GPA on a 4.0 scale and major specific stats (LE supported for this only
 currently).
