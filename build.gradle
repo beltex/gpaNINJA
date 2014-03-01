@@ -4,6 +4,7 @@ apply plugin: 'eclipse-wtp'
 
 project.webAppDirName = 'WebContent'
 sourceCompatibility = 1.7
+war.archiveName = 'gpaNINJA.war'
 
 repositories {
     mavenCentral()

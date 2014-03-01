@@ -133,3 +133,15 @@ Given this, to allow for easy Jenkins deployment of the latest master branch
 code, the webapps dir contains the exported WAR file. It is a TODO list item to
 convert the project to something such as Maven or Gradle for more ideal project
 building and deployment.
+
+**Gradle Build**
+
+- Work in progress
+
+```bash
+# To build project
+gradle build
+
+# To create Eclipse project files
+gradle eclipse
+```
