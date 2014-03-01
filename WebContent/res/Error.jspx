@@ -11,15 +11,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
   <!-- HEAD START -->
-  <head>
-    <meta charset="utf-8"></meta>
-    <meta content="text/html"></meta>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-    <title>gpaNINJA</title>
-
-    <!-- Bootstrap 3 core CSS - MUST COME BEFORE SIS.css - USED WITH PERMISSION OF HR -->
-    <link href="${pageContext.request.contextPath}/res/bootstrap3.0.3/dist/css/bootstrap.css" rel="stylesheet"></link>
-  </head>
+  <jsp:include page="include/Head.jspx" />
   <!-- HEAD END -->
 
   <!-- BODY START -->

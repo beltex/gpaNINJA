@@ -126,14 +126,6 @@ For more, see:
 - http://stackoverflow.com/a/7793684
 - http://andyarismendi.blogspot.ca/2012/01/changing-tomcats-ca-trust-keystore-file.html
 
-**WAR File Export**
-
-Currently, packaging is done through Eclipse, using the export to WAR option.
-Given this, to allow for easy Jenkins deployment of the latest master branch
-code, the webapps dir contains the exported WAR file. It is a TODO list item to
-convert the project to something such as Maven or Gradle for more ideal project
-building and deployment.
-
 **Gradle Build**
 
 - Work in progress
