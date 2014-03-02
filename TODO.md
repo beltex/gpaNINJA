@@ -2,7 +2,6 @@ TODO
 ======
 
 - Logging framework
-- Convert to Maven or Gradle project
 - Tune Tomcat settings
 - Add more JUnit tests
 - Index page app info + privacy note
