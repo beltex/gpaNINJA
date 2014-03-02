@@ -58,7 +58,6 @@ public class Index extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException,
                                                                                            ServletException,
                                                                                            IllegalStateException {
-        System.out.println("YOOO");
         String forwardPath = PATH_INDEX;
         String username = request.getParameter("username");
         String password = request.getParameter("password");

@@ -35,7 +35,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 - Java (7)
 - Apache Tomcat (7.0.42)
-- Twitter Bootstrap (3.0.2)
+- Twitter Bootstrap (3.1.1)
 - JSoup (1.7.2)
 - JUnit (4.11)
 
