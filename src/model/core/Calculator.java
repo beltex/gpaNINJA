@@ -33,13 +33,20 @@ public class Calculator {
         YORK_GRADES.put("P", -1.0);
 
         YORK_GRADES_SPECIAL = new HashSet<String>();
-        YORK_GRADES_SPECIAL.add("DEF");
         YORK_GRADES_SPECIAL.add("NCR");
+        YORK_GRADES_SPECIAL.add("A+ NCR");
+        YORK_GRADES_SPECIAL.add("A NCR");
+        YORK_GRADES_SPECIAL.add("B+ NCR");
+        YORK_GRADES_SPECIAL.add("B NCR");
+        YORK_GRADES_SPECIAL.add("C+ NCR");
+        YORK_GRADES_SPECIAL.add("C NCR");
+        YORK_GRADES_SPECIAL.add("D+ NCR");
         YORK_GRADES_SPECIAL.add("D NCR");
         YORK_GRADES_SPECIAL.add("E NCR");
         YORK_GRADES_SPECIAL.add("F NCR");
         YORK_GRADES_SPECIAL.add("NGR");
         YORK_GRADES_SPECIAL.add("F NGR");
+        YORK_GRADES_SPECIAL.add("DEF");
         YORK_GRADES_SPECIAL.add("\u00A0");	// Non-break space - waiting on grade
         YORK_GRADES_SPECIAL.add("in progress");
 
