@@ -36,8 +36,9 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 - Java (7)
 - Apache Tomcat (7.0.42)
 - Twitter Bootstrap (3.1.1)
-- JSoup (1.7.2)
+- jsoup (1.7.2)
 - JUnit (4.11)
+- Gradle (1.10)
 
 ### Live Instance
 
@@ -53,6 +54,16 @@ Apparently, I'm the only one who's heard of this. :)
 
 Setup Notes
 ========
+
+**Gradle Build**
+
+```bash
+# To create Eclipse project files
+gradle eclipse
+
+# To build project
+gradle build
+```
 
 **Java Truststore**
 
@@ -125,15 +136,3 @@ To force HTTPS, in **web.xml**, add the following
 For more, see:
 - http://stackoverflow.com/a/7793684
 - http://andyarismendi.blogspot.ca/2012/01/changing-tomcats-ca-trust-keystore-file.html
-
-**Gradle Build**
-
-- Work in progress
-
-```bash
-# To build project
-gradle build
-
-# To create Eclipse project files
-gradle eclipse
-```
