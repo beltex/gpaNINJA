@@ -1,5 +1,4 @@
 apply plugin: 'war'
-apply plugin: 'java'
 apply plugin: 'eclipse-wtp'
 
 project.webAppDirName = 'WebContent'
