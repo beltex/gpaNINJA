@@ -10,10 +10,17 @@
             omit-xml-declaration="true"/>
 
 <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="${pageContext.request.contextPath}" title="Home">gpaNINJA</a>
-    </div>
+<div class="container">
+    <ul class="nav navbar-nav">
+        <li>
+            <a class="navbar-brand" href="${pageContext.request.contextPath}" title="Home">gpaNINJA</a>
+        </li>
+        <li>
+            <a class="octocat" title="Source" href="https://github.com/beltex/gpaNINJA">
+                    <img src="res/assets/octocat.png"/>
+            </a>
+        </li>
+    </ul>
   </div>
 </div>
 
