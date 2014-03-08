@@ -1,9 +1,60 @@
+// CSS prep
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.eriwen:gradle-css-plugin:1.8.3'
+    }
+}
+
+apply plugin: 'css'
+
+css.source {
+    prep {
+        css {
+            srcDir "WebContent/res/"
+            include "*.css"
+            exclude "*.min.css"
+        }
+    }
+}
+
+// Specify a collection of files to be combined, then minified and finally GZip compressed
+combineCss {
+    source = css.source.prep.css.files
+    dest = "${buildDir}/all.css"
+}
+
+minifyCss {
+    source = combineCss
+    dest = "${buildDir}/all-min.css"
+}
+
+gzipCss {
+    source = minifyCss
+    dest = "${buildDir}/tmp/css/gpaNINJA.css"
+}
+
+// WAR file build
+
 apply plugin: 'war'
 apply plugin: 'eclipse-wtp'
 
-project.webAppDirName = 'WebContent'
+war {
+    dependsOn 'gzipCss'
+    exclude 'WebContent/res/*.css'
+
+  from ('build/tmp/css') {
+    include '**/*.css'
+    into 'res'
+  }
+}
+
 sourceCompatibility = 1.7
 war.archiveName = 'gpaNINJA.war'
+project.webAppDirName = 'WebContent'
 
 repositories {
     mavenCentral()

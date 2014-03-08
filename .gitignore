@@ -3,6 +3,7 @@
 
 # Gradle
 .gradle/
+*.min.css
 
 # Java
 *.class

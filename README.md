@@ -17,7 +17,7 @@ semesters, to determine ones academic standing. This is inconvenient, not to
 mention the stats disappear once the next semester starts, in addition to 
 limited progress information. The only GPA calculators that are York specific 
 require manual input of grades, tedious to say the least, and error prone. 
-[Example](http://www.yorku.ca/laps/students/gpa.html).
+[Example](http://www.yorku.ca/laps/students/gpa.html)
 
 ### Privacy & Use
 
