@@ -21,7 +21,7 @@ css.source {
     }
 }
 
-// Specify a collection of files to be combined, then minified and finally GZip compressed
+// Specify a collection of files to be combined, then minified
 combineCss {
     source = css.source.prep.css.files
     dest = "${buildDir}/all.css"
@@ -29,11 +29,6 @@ combineCss {
 
 minifyCss {
     source = combineCss
-    dest = "${buildDir}/all-min.css"
-}
-
-gzipCss {
-    source = minifyCss
     dest = "${buildDir}/tmp/css/gpaNINJA.css"
 }
 
@@ -43,7 +38,7 @@ apply plugin: 'war'
 apply plugin: 'eclipse-wtp'
 
 war {
-    dependsOn 'gzipCss'
+    dependsOn 'minifyCss'
     exclude 'WebContent/res/*.css'
 
   from ('build/tmp/css') {
