@@ -56,7 +56,7 @@ repositories {
 }
 
 dependencies {
-    compile 'org.jsoup:jsoup:1.7.2'
+    compile 'org.jsoup:jsoup:1.7.3'
     providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
     runtime 'javax.servlet:jstl:1.1.2'
     testCompile 'junit:junit:4.11'
