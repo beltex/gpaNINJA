@@ -1,5 +1,5 @@
 # General purpose .gitignore file
-# Modified from Twitter Bootstrap
+# Modified from Bootstrap
 
 # Gradle
 .gradle/
