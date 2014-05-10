@@ -36,7 +36,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 - Java (7)
 - Apache Tomcat (7.0.42)
 - Bootstrap (3.1.1)
-- jsoup (1.7.2)
+- jsoup (1.7.3)
 - JUnit (4.11)
 - Gradle (1.10)
 
