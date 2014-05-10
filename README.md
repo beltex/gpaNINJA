@@ -31,6 +31,8 @@ COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+This project is under the **MIT License**. See ```LICENSE``` for more.
+
 ### Tech Stack
 
 - Java (7)
@@ -52,8 +54,7 @@ It was my understanding that some unwritten rule existed among hackers in which
 project names are suffixed with 'NINJA', when a better name ceases to exist. 
 Apparently, I'm the only one who's heard of this. :)
 
-Setup Notes
-========
+## Setup
 
 **Gradle Build**
 
@@ -61,7 +62,8 @@ Setup Notes
 # To create Eclipse project files
 gradle eclipse
 
-# To build project
+# To build the WAR file
+# It will be found under build/libs/gpaNINJA.war
 gradle build
 ```
 
