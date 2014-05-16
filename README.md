@@ -1,8 +1,6 @@
 gpaNINJA
 ========
 
-### What
-
 An automatic GPA calculator for York University. Takes student credentials 
 (Passport York ID) to scrape transcript from school server, automatically 
 computing GPA in one click for a seamless UX. Provides additional stats such 
@@ -56,14 +54,15 @@ Apparently, I'm the only one who's heard of this. :)
 
 ## Setup
 
-**Gradle Build**
+**Gradle**
 
 ```bash
 # To create Eclipse project files
 gradle eclipse
 
-# To build the WAR file
-# It will be found under build/libs/gpaNINJA.war
+# To build the WAR file and run the JUnit tests
+# WAR file: build/libs/gpaNINJA.war
+# Test results: build/reports/tests/index.html
 gradle build
 ```
 

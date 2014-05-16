@@ -1,6 +1,8 @@
-package model.core;
+package test.java.junit;
 
 import static org.junit.Assert.*;
+import main.java.model.core.Parser;
+import main.java.model.core.Student;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -13,8 +15,9 @@ import java.util.ArrayList;
 public class ParserTest {
 
     private final static String RESOURCE_PATH = System.getProperty("user.dir") +
+                                                File.separator + "src" +
                                                 File.separator + "test" +
-                                                File.separator + "resource" +
+                                                File.separator + "resources" +
                                                 File.separator;
 
     private static Parser parser;

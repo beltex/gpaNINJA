@@ -2,7 +2,7 @@
  * Calculator that computes stats from given student courses
  *
  */
-package model.core;
+package main.java.model.core;
 
 import java.util.HashMap;
 import java.util.ArrayList;

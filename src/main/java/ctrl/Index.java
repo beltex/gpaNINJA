@@ -3,7 +3,7 @@
  *
  */
 
-package ctrl;
+package main.java.ctrl;
 
 import java.io.IOException;
 
@@ -16,8 +16,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.jsoup.HttpStatusException;
 
-import model.NINJA;
-import model.core.Student;
+import main.java.model.NINJA;
+import main.java.model.core.Student;
 
 @WebServlet(urlPatterns={"/gpaNINJA"})
 public class Index extends HttpServlet {

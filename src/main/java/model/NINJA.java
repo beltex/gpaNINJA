@@ -3,13 +3,13 @@
  *
  */
 
-package model;
+package main.java.model;
 
 import java.util.ArrayList;
 
-import model.core.Calculator;
-import model.core.Student;
-import model.core.Parser;
+import main.java.model.core.Calculator;
+import main.java.model.core.Parser;
+import main.java.model.core.Student;
 
 import org.jsoup.HttpStatusException;
 import org.jsoup.nodes.Document;

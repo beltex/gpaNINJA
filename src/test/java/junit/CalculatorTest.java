@@ -1,6 +1,9 @@
-package model.core;
+package test.java.junit;
 
 import static org.junit.Assert.*;
+import main.java.model.core.Calculator;
+import main.java.model.core.Course;
+import main.java.model.core.Student;
 
 import org.junit.BeforeClass;
 import org.junit.Test;

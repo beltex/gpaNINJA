@@ -35,7 +35,7 @@
  * Example:
  *% java InstallCert ecc.fedora.redhat.com
  */
-package dev;
+package main.java.dev;
 
 import javax.net.ssl.*;
 import java.io.*;

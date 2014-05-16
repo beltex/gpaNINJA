@@ -44,3 +44,7 @@ nbproject
 *.sublime-project
 *.sublime-workspace
 /bin
+
+# Folders to ignore
+node_modules
+bower_components
