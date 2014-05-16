@@ -1,8 +1,8 @@
 package test.java.junit;
 
 import static org.junit.Assert.*;
-import main.java.model.core.Parser;
-import main.java.model.core.Student;
+import main.java.model.Parser;
+import main.java.model.Student;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;

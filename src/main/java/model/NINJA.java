@@ -1,32 +1,54 @@
-/*
- * The model "controller" - point of contact
- *
- */
-
 package main.java.model;
 
 import java.util.ArrayList;
 
-import main.java.model.core.Calculator;
-import main.java.model.core.Parser;
-import main.java.model.core.Student;
-
 import org.jsoup.HttpStatusException;
 import org.jsoup.nodes.Document;
 
+
+/**
+ * Model "controller" - single point of contact for Index servlet
+ *
+ */
 public class NINJA {
 
-    private final Scraper scraper;
-    private final Calculator calculator;
-    private final Parser parser;
+
+    ///////////////////////////////////////////////////////////////////////////
+    // PRIVATE ATTRIBUTES
+    ///////////////////////////////////////////////////////////////////////////
+
+
+    private Scraper scraper;
+    private Parser parser;
+    private Calculator calculator;
+
+
+    ///////////////////////////////////////////////////////////////////////////
+    // CONSTRUCTORS
+    ///////////////////////////////////////////////////////////////////////////
+
 
     public NINJA() {
-        // All singletons
         scraper = new Scraper();
         parser = new Parser();
         calculator = new Calculator();
     }
 
+
+    ///////////////////////////////////////////////////////////////////////////
+    // PUBLIC METHODS
+    ///////////////////////////////////////////////////////////////////////////
+
+
+    /**
+     * Compute stats for given user (student).
+     *
+     * @param username Passport York ID
+     * @param password Password for Passport York ID
+     * @return Student with stats attributes set
+     * @throws HttpStatusException HTTP related issues on login and scraping
+     * @throws Exception HTML format related issues
+     */
     public Student compute(String username, String password) throws HttpStatusException, Exception {
         Student student = null;
 

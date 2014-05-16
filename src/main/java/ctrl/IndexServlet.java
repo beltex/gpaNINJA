@@ -1,8 +1,3 @@
-/*
- * Index page servlet, the app controller
- *
- */
-
 package main.java.ctrl;
 
 import java.io.IOException;
@@ -17,36 +12,93 @@ import javax.servlet.http.HttpServletResponse;
 import org.jsoup.HttpStatusException;
 
 import main.java.model.NINJA;
-import main.java.model.core.Student;
+import main.java.model.Student;
 
+
+/**
+ * Application controller. Single point of contact for client.
+ *
+ */
 @WebServlet(urlPatterns={"/gpaNINJA"})
-public class Index extends HttpServlet {
+public class IndexServlet extends HttpServlet {
+
+
+    ///////////////////////////////////////////////////////////////////////////
+    // PRIVATE ATTRIBUTES
+    ///////////////////////////////////////////////////////////////////////////
+
 
     private static final long serialVersionUID = 1L;
 
-    private static final int NUM_PARAMS = 3;
-    private static final String VAL_LOGIN = "Login";
-    private static final String PATH_GPA = "/GPA.jspx";
+
+    /**
+     * Index (root) page path
+     */
     private static final String PATH_INDEX = "/Index.jspx";
 
-    private static final String E1 = "E1";    // Issue with York site(s)
-    private static final String E2 = "E2";    // Bad login
 
-    public Index() {
+    /**
+     * Computed stats page path
+     */
+    private static final String PATH_GPA = "/GPA.jspx";
+
+
+    /**
+     * Expected number of parameters in POST request
+     */
+    private static final int PARAMS = 3;
+
+
+    /**
+     * Error code: Issue with York site(s)
+     */
+    private static final String E1 = "E1";
+
+
+    /**
+     * Error code: Bad login
+     */
+    private static final String E2 = "E2";
+
+
+    private static final String ATTRIBUTE_MODEL = "NINJA";
+
+
+    private static final String COMPUTE = "compute";
+
+
+    ///////////////////////////////////////////////////////////////////////////
+    // CONSTRUCTORS
+    ///////////////////////////////////////////////////////////////////////////
+
+
+    public IndexServlet() {
         super();
     }
 
+
+    ///////////////////////////////////////////////////////////////////////////
+    // PUBLIC METHODS
+    ///////////////////////////////////////////////////////////////////////////
+
+
     public void init() throws ServletException {
         try {
-            // Create singleton instance of NINJA class, the model controller
-            // Put it in context as we need it for the life-span of the app
-            this.getServletContext().setAttribute("gpaNINJA", new NINJA());
+            // Need this for life-span of app, hence in servlet context
+            this.getServletContext().setAttribute(ATTRIBUTE_MODEL, new NINJA());
         } catch (Exception e) {
             e.printStackTrace();
+
             // Should exit app if init fails
             System.exit(-1);
         }
     }
+
+
+    ///////////////////////////////////////////////////////////////////////////
+    // PROTECTED METHODS
+    ///////////////////////////////////////////////////////////////////////////
+
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException,
                                                                                           ServletException,
@@ -55,6 +107,7 @@ public class Index extends HttpServlet {
         dispatcher.forward(request, response);
     }
 
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException,
                                                                                            ServletException,
                                                                                            IllegalStateException {
@@ -62,11 +115,11 @@ public class Index extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
-        if (VAL_LOGIN.equals(request.getParameter("loginButton")) && username != null
-                                                                  && password != null
-                                                                  && request.getParameterMap().size() == NUM_PARAMS) {
+        if (COMPUTE.equals(request.getParameter(COMPUTE)) && username != null
+                                                          && password != null
+                                                          && request.getParameterMap().size() == PARAMS) {
             try {
-                NINJA gpaNINJA = (NINJA)this.getServletContext().getAttribute("gpaNINJA");
+                NINJA gpaNINJA = (NINJA) this.getServletContext().getAttribute(ATTRIBUTE_MODEL);
                 Student student = gpaNINJA.compute(username, password);
 
                 request.setAttribute("student", student);
@@ -76,8 +129,10 @@ public class Index extends HttpServlet {
                 String ERROR_MSG = e.getMessage();
 
                 if (ERROR_MSG == null || ERROR_MSG.startsWith(E1)) {
-                    // The York site that handles transcripts goes down every now and
-                    // then after midnight for a few hours
+                    /*
+                     * York site that handles transcripts goes down every now
+                     * and then after midnight for a few hours
+                     */
                     request.setAttribute("ERROR_MSG", "Looks like the York site is down");
                     response.sendError(HttpServletResponse.SC_BAD_GATEWAY);
                 }
