@@ -26,7 +26,7 @@
   <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet"></link>
 
   <!-- gpaNINJA custom CSS -->
-  <link href="${pageContext.request.contextPath}/res/gpaNINJA.css" rel="stylesheet"></link>
+  <link href="${pageContext.request.contextPath}/css/gpaNINJA.css" rel="stylesheet"></link>
 </head>
 
 </jsp:root>

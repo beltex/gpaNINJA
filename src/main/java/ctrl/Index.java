@@ -27,7 +27,7 @@ public class Index extends HttpServlet {
     private static final int NUM_PARAMS = 3;
     private static final String VAL_LOGIN = "Login";
     private static final String PATH_GPA = "/GPA.jspx";
-    private static final String PATH_INDEX = "/Root.jspx";
+    private static final String PATH_INDEX = "/Index.jspx";
 
     private static final String E1 = "E1";    // Issue with York site(s)
     private static final String E2 = "E2";    // Bad login

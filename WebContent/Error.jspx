@@ -43,7 +43,7 @@
           <!-- FORM STARTS -->
         <form action="${pageContext.request.contextPath}" method="POST">
           <br />
-          <input type="submit" name="restart" value="Home" class="btn btn-danger pull-left btn-lg" />
+          <input type="submit" name="restart" value="Home" class="btn btn-danger pull-left btn-lg"></input>
           <br />
         </form>
         <!-- FORM ENDS -->

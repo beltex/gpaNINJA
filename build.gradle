@@ -4,6 +4,7 @@ buildscript {
     repositories {
         mavenCentral()
     }
+    
     dependencies {
         classpath 'com.eriwen:gradle-css-plugin:1.8.3'
     }
@@ -14,7 +15,7 @@ apply plugin: 'css'
 css.source {
     prep {
         css {
-            srcDir "WebContent/res/"
+            srcDir "WebContent/css/"
             include "*.css"
             exclude "*.min.css"
         }
@@ -39,15 +40,15 @@ apply plugin: 'eclipse-wtp'
 
 war {
     dependsOn 'minifyCss'
-    exclude 'WebContent/res/*.css'
+    exclude 'WebContent/css/*.css'
 
   from ('build/tmp/css') {
     include '**/*.css'
-    into 'res'
+    into 'css'
   }
 }
 
-sourceCompatibility = 1.7
+sourceCompatibility = '1.7'
 war.archiveName = 'gpaNINJA.war'
 project.webAppDirName = 'WebContent'
 

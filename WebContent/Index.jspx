@@ -11,14 +11,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
     <!-- HEAD START -->
-    <jsp:include page="res/include/Head.jspx" />
+    <jsp:include page="include/Head.jspx" />
     <!-- HEAD END -->
 
     <!-- BODY START -->
     <body>
 
       <!-- NAVBAR START -->
-      <jsp:include page="res/include/Navbar.jspx" />
+      <jsp:include page="include/Navbar.jspx" />
       <!-- NAVBAR END -->
 
       <!-- CONTAINER START -->
