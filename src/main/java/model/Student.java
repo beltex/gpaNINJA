@@ -65,7 +65,6 @@ public class Student {
 
     /**
      * How many credits has this student passed?
-     *
      */
     private double creditsPassed;
 
@@ -101,19 +100,19 @@ public class Student {
 
 
     /**
-     *
+     * OLSAS GPA points
      */
-    private double gpaPointsOLSAS;      // OLSAS GPA points
+    private double gpaPointsOLSAS;
 
 
     /**
-     *
+     * GPA points overall
      */
-    private double gpaPoints;           // GPA points overall
+    private double gpaPoints;
 
 
     /**
-     *
+     * GPA on 4.0 scale
      */
     private double gpa_OLSAS;
 

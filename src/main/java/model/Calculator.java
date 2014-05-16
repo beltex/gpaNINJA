@@ -1,7 +1,3 @@
-/*
- *
- *
- */
 package main.java.model;
 
 import java.util.HashMap;
@@ -133,8 +129,8 @@ public class Calculator {
                      * Pass/Fail course. Could be a 0 credit course.
                      *
                      * NOTE: This grade doesn't count towards GPA,
-                     *	     thus we add these credits to creditsPassed
-                     *		 at the end, after the GPA has been computed
+                     *       thus we add these credits to creditsPassed
+                     *       at the end, after the GPA has been computed
                      */
 
                     creditsPassFailCourse += creditsCourse;
@@ -151,9 +147,9 @@ public class Calculator {
                      *       TODO: Note this to the view
                      *
                      * NOTE 2: To fix this, need extra meta-data about the
-                     * 		   grade. There are some defined pass/fail courses,
-                     * 		   getting this list will help. But, a student can
-                     * 		   always apply to have a course converted to
+                     *         grade. There are some defined pass/fail courses,
+                     *         getting this list will help. But, a student can
+                     *         always apply to have a course converted to
                      *         pass/fail.
                      */
 

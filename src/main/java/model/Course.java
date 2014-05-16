@@ -6,22 +6,22 @@ package main.java.model;
  * grade in a transcript. Here is sample of what a course looks like in the
  * transcript:
  *
- * 		FW07	AP PHIL 2060  6.00 C	Jurisprudence	A
+ *      FW07	AP PHIL 2060  6.00 C	Jurisprudence	A
  *
  * Where the format is
  *
- * 		<TERM> <FACULTY> <DEPARTMENT> <CODE> <CREDITS> <SECTION> <TITLE> <GRADE>
+ *      <TERM> <FACULTY> <DEPARTMENT> <CODE> <CREDITS> <SECTION> <TITLE> <GRADE>
  *
  * Thus
  *
- * 		FW07 		  - Term
- * 		AP 			  - Faculty
- * 		PHIL 		  - Department
- * 		2060 		  - Course code
- * 		6.00 		  - Credits
- * 		C			  - Section
- * 		Jurisprudence - Title
- * 		A			  - Grade
+ *      FW07          - Term
+ *      AP            - Faculty
+ *      PHIL          - Department
+ *      2060          - Course code
+ *      6.00          - Credits
+ *      C             - Section
+ *      Jurisprudence - Title
+ *      A             - Grade
  */
 public class Course {
 

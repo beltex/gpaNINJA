@@ -107,7 +107,7 @@ public class Parser {
     private Student processProgram(Document doc, Student student) throws Exception {
         /*
          * TODO: On any format issue, could just log and notify the view.
-         * 		 However, Calculator class requires student program.
+         *       However, Calculator class requires student program.
          */
 
         int numTokens;
