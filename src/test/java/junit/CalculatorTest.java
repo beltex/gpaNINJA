@@ -1,9 +1,9 @@
-package test.java.junit;
+package junit;
 
 import static org.junit.Assert.*;
-import main.java.model.Calculator;
-import main.java.model.Course;
-import main.java.model.Student;
+import model.Calculator;
+import model.Course;
+import model.Student;
 
 import org.junit.BeforeClass;
 import org.junit.Test;

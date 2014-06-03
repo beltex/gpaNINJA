@@ -73,8 +73,8 @@ The **wrem.sis.yorku.ca** certificate must be added to your Java
 will not be possible (you will get an exception) 
 
 ``` bash
-javac src/dev/InstallCert.java
-java -cp ./src dev.InstallCert wrem.sis.yorku.ca
+javac src/main/java/dev/InstallCert.java
+java -cp ./src/main/java/ dev.InstallCert wrem.sis.yorku.ca
 
 # You should now have a jssecacerts file in your current dir. To check that the 
 # cert has been added run the below command. The store password is 'default' 

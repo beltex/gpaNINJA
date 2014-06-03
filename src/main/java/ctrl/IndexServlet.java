@@ -1,4 +1,4 @@
-package main.java.ctrl;
+package ctrl;
 
 import java.io.IOException;
 
@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.jsoup.HttpStatusException;
 
-import main.java.model.NINJA;
-import main.java.model.Student;
+import model.NINJA;
+import model.Student;
 
 
 /**
