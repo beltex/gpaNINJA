@@ -34,11 +34,12 @@ This project is under the **MIT License**. See ```LICENSE``` for more.
 ### Tech Stack
 
 - Java (7)
-- Apache Tomcat (7.0.42)
-- Bootstrap (3.1.1)
-- jsoup (1.7.3)
-- JUnit (4.11)
-- Gradle (1.10)
+- [Apache Tomcat](http://tomcat.apache.org) (7.0.42)
+- [Bootstrap](http://getbootstrap.com) (3.1.1)
+- [jsoup](http://jsoup.org) (1.7.3)
+- [JUnit](http://junit.org) (4.11)
+- [Gradle](http://www.gradle.org) (1.12)
+    - [Gradle CSS Plugin](https://github.com/eriwen/gradle-css-plugin)
 
 ### Live Instance
 
