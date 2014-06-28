@@ -48,7 +48,12 @@ war {
   }
 }
 
+version = '1.0.0'
+description = 'York University automatic GPA calculator'
+
 sourceCompatibility = '1.7'
+targetCompatibility = '1.7'
+
 war.archiveName = 'gpaNINJA.war'
 project.webAppDirName = 'WebContent'
 
