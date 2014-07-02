@@ -38,7 +38,7 @@ This project is under the **MIT License**. See ```LICENSE``` for more.
 - [Bootstrap](http://getbootstrap.com) (3.1.1)
 - [jsoup](http://jsoup.org) (1.7.3)
 - [JUnit](http://junit.org) (4.11)
-- [Gradle](http://www.gradle.org) (1.12)
+- [Gradle](http://www.gradle.org) (2.0)
     - [Gradle CSS Plugin](https://github.com/eriwen/gradle-css-plugin)
 
 ### Live Instance
