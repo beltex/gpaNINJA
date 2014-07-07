@@ -1,52 +1,6 @@
-// CSS prep
-
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-    
-    dependencies {
-        classpath 'com.eriwen:gradle-css-plugin:1.11.1'
-    }
-}
-
 apply plugin: 'css'
-
-css.source {
-    prep {
-        css {
-            srcDir "WebContent/css/"
-            include "*.css"
-            exclude "*.min.css"
-        }
-    }
-}
-
-// Specify a collection of files to be combined, then minified
-combineCss {
-    source = css.source.prep.css.files
-    dest = "${buildDir}/all.css"
-}
-
-minifyCss {
-    source = combineCss
-    dest = "${buildDir}/tmp/css/gpaNINJA.css"
-}
-
-// WAR file build
-
 apply plugin: 'war'
 apply plugin: 'eclipse-wtp'
-
-war {
-    dependsOn 'minifyCss'
-    exclude 'WebContent/css/*.css'
-
-  from ('build/tmp/css') {
-    include '**/*.css'
-    into 'css'
-  }
-}
 
 version = '1.0.0'
 description = 'York University automatic GPA calculator'
@@ -57,13 +11,60 @@ targetCompatibility = '1.7'
 war.archiveName = 'gpaNINJA.war'
 project.webAppDirName = 'WebContent'
 
-repositories {
-    mavenCentral()
-}
+repositories { mavenCentral() }
 
 dependencies {
-    compile 'org.jsoup:jsoup:1.7.3'
-    providedCompile 'javax.servlet:javax.servlet-api:3.0.1'
-    runtime 'javax.servlet:jstl:1.1.2'
-    testCompile 'junit:junit:4.11'
+  compile         'org.jsoup:jsoup:1.7.3'
+  providedCompile 'javax.servlet:javax.servlet-api:3.0.1'
+  runtime         'javax.servlet:jstl:1.1.2'
+  testCompile     'junit:junit:4.11'
+}
+
+
+/*
+ * CSS prep - specify a collection of files to be combined, then minified
+ */
+
+
+buildscript {
+  repositories { mavenCentral() }
+  dependencies {
+    classpath 'com.eriwen:gradle-css-plugin:1.11.1'
+  }
+}
+
+css.source {
+  prep {
+    css {
+      srcDir "WebContent/css/"
+      include "*.css"
+      exclude "*.min.css"
+    }
+  }
+}
+
+combineCss {
+  source = css.source.prep.css.files
+  dest = "${buildDir}/all.css"
+}
+
+minifyCss {
+  source = combineCss
+  dest = "${buildDir}/tmp/css/gpaNINJA.css"
+}
+
+
+/*
+ * WAR file build
+ */
+
+
+war {
+  dependsOn 'minifyCss'
+  exclude 'WebContent/css/*.css'
+
+  from ('build/tmp/css') {
+    include '**/*.css'
+    into 'css'
+  }
 }
