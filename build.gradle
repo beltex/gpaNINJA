@@ -1,5 +1,6 @@
 apply plugin: 'css'
 apply plugin: 'war'
+apply plugin: 'findbugs'
 apply plugin: 'eclipse-wtp'
 
 version = '1.0.0'
@@ -51,6 +52,23 @@ combineCss {
 minifyCss {
   source = combineCss
   dest = "${buildDir}/tmp/css/gpaNINJA.css"
+}
+
+
+/*
+ * FindBugs
+ */
+
+
+tasks.withType(FindBugs) {
+  findbugsMain.onlyIf {project.properties['findbugs'].toBoolean()}
+  findbugsTest.onlyIf {project.properties['findbugs'].toBoolean()}
+
+  ignoreFailures = true
+  reports {
+    xml.enabled = false
+    html.enabled = true
+  }
 }
 
 
