@@ -56,7 +56,7 @@ minifyCss {
 
 
 /*
- * FindBugs
+ * FindBugs - static code analysis
  */
 
 
