@@ -12,6 +12,7 @@
 <head>
   <meta charset="utf-8"></meta>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+  <meta name="description" content="York University automatic GPA calculator"></meta>
 
   <c:choose>
     <c:when test = "${student.name != null}">
@@ -23,7 +24,7 @@
   </c:choose>
 
   <!-- Bootstrap core CSS - MUST COME BEFORE gpaNINJA.css -->
-  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet"></link>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"></link>
 
   <!-- gpaNINJA custom CSS -->
   <link href="${pageContext.request.contextPath}/css/gpaNINJA.css" rel="stylesheet"></link>

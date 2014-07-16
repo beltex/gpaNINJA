@@ -35,7 +35,7 @@ This project is under the **MIT License**. See ```LICENSE``` for more.
 
 - Java (7)
 - [Apache Tomcat](http://tomcat.apache.org) (7.0.42)
-- [Bootstrap](http://getbootstrap.com) (3.1.1)
+- [Bootstrap](http://getbootstrap.com) (3.2.0)
 - [jsoup](http://jsoup.org) (1.7.3)
 - [JUnit](http://junit.org) (4.11)
 - [Gradle](http://www.gradle.org) (2.0)
