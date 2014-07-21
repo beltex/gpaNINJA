@@ -3,7 +3,7 @@ apply plugin: 'war'
 apply plugin: 'findbugs'
 apply plugin: 'eclipse-wtp'
 
-version = '1.0.0'
+version = '1.0.1'
 description = 'York University automatic GPA calculator'
 
 sourceCompatibility = '1.7'
