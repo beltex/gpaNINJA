@@ -119,7 +119,8 @@ public class Scraper {
             res = conn.method(Method.GET).execute();
         } catch (Exception e) {
             e.printStackTrace();
-            throw new HttpStatusException("E1 - URL_TRANS - INITIAL - HTTP Request Failure",
+            throw new HttpStatusException("E1 - URL_TRANS - INITIAL - HTTP " +
+                                          "Request Failure",
                                           res.statusCode(),
                                           URL_TRANS);
         }
@@ -151,7 +152,8 @@ public class Scraper {
             res = conn.method(Method.POST).execute();
         } catch (Exception e) {
             e.printStackTrace();
-            throw new HttpStatusException("E1 - URL_LOGIN - LOGIN - HTTP Request Failure",
+            throw new HttpStatusException("E1 - URL_LOGIN - LOGIN - HTTP " +
+                                          "Request Failure",
                                           res.statusCode(),
                                           URL_LOGIN);
         }
@@ -183,7 +185,8 @@ public class Scraper {
             docs.add(res.parse());
         } catch (Exception e) {
             e.printStackTrace();
-            throw new HttpStatusException("E1 - URL_TRANS - SECOND - HTTP Request Failure",
+            throw new HttpStatusException("E1 - URL_TRANS - SECOND - HTTP " +
+                                          "Request Failure",
                                           res.statusCode(),
                                           URL_TRANS);
         }
@@ -200,7 +203,8 @@ public class Scraper {
             docs.add(res.parse());
         } catch (Exception e) {
             e.printStackTrace();
-            throw new HttpStatusException("E1 - URL_PROGRAM - HTTP Request Failure",
+            throw new HttpStatusException("E1 - URL_PROGRAM - HTTP Request " +
+                                          "Failure",
                                           res.statusCode(),
                                           URL_PROGRAM);
         }
@@ -216,7 +220,8 @@ public class Scraper {
             res = conn.method(Method.POST).execute();
         } catch (Exception e) {
             e.printStackTrace();
-            throw new HttpStatusException("E1 - URL_LOGIN - LOGOUT - HTTP Request Failure",
+            throw new HttpStatusException("E1 - URL_LOGIN - LOGOUT - HTTP " +
+                                          "Request Failure",
                                           res.statusCode(),
                                           URL_LOGIN);
         }

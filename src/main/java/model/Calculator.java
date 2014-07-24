@@ -72,7 +72,7 @@ public class Calculator {
         YORK_GRADES_SPECIAL.add("NGR");
         YORK_GRADES_SPECIAL.add("F NGR");
         YORK_GRADES_SPECIAL.add("DEF");
-        YORK_GRADES_SPECIAL.add("\u00A0");	// Non-break space - waiting on grade
+        YORK_GRADES_SPECIAL.add("\u00A0"); // Non-break space, waiting on grade
         YORK_GRADES_SPECIAL.add("in progress");
 
         OLSAS_2014 = new HashMap<String, Double>();
@@ -208,7 +208,9 @@ public class Calculator {
             if (YORK_GRADES.containsKey(grade)) {
                 double gradeValue = YORK_GRADES.get(grade);
 
-                if (gradeValue >= YORK_GRADES.get("D") || gradeValue == YORK_GRADES.get("P")) {
+                if (gradeValue >= YORK_GRADES.get("D") ||
+                    gradeValue == YORK_GRADES.get("P")) {
+
                     String faculty = course.getFaculty();
                     String department = course.getDepartment();
                     int courseCode = course.getCode();
@@ -220,14 +222,16 @@ public class Calculator {
                     }
 
                     // Get non-CSE/MATH credits
-                    if (!department.equals("MATH") && !department.equals("CSE")) {
+                    if (!department.equals("MATH") &&
+                        !department.equals("CSE")) {
                         credits_NonCSEMath += courseCredits;
                     }
 
                     /*
                      * Get science credits
                      *
-                     * TODO: Math courses used to fall under AS (Art's & Science)
+                     * TODO: Math courses used to fall under AS (Art's &
+                     *       Science)
                      */
                     if (faculty.equals("SC") || faculty.equals("LE")) {
                         creditsSci += courseCredits;

@@ -100,26 +100,34 @@ public class IndexServlet extends HttpServlet {
     ///////////////////////////////////////////////////////////////////////////
 
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException,
-                                                                                          ServletException,
-                                                                                          IllegalStateException {
-        RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher(PATH_INDEX);
+    protected void doGet(HttpServletRequest request,
+                         HttpServletResponse response) throws
+                                                       IOException,
+                                                       ServletException,
+                                                       IllegalStateException {
+        RequestDispatcher dispatcher = this.getServletContext()
+                                           .getRequestDispatcher(PATH_INDEX);
         dispatcher.forward(request, response);
     }
 
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException,
-                                                                                           ServletException,
-                                                                                           IllegalStateException {
+    protected void doPost(HttpServletRequest request,
+                          HttpServletResponse response) throws
+                                                        IOException,
+                                                        ServletException,
+                                                        IllegalStateException {
         String forwardPath = PATH_INDEX;
         String username = request.getParameter("username");
         String password = request.getParameter("password");
+        int paramMapSize = request.getParameterMap().size();
 
         if (COMPUTE.equals(request.getParameter(COMPUTE)) && username != null
                                                           && password != null
-                                                          && request.getParameterMap().size() == PARAMS) {
+                                                          && paramMapSize ==
+                                                             PARAMS) {
             try {
-                NINJA gpaNINJA = (NINJA) this.getServletContext().getAttribute(ATTRIBUTE_MODEL);
+                NINJA gpaNINJA = (NINJA) this.getServletContext()
+                                             .getAttribute(ATTRIBUTE_MODEL);
                 Student student = gpaNINJA.compute(username, password);
 
                 request.setAttribute("student", student);
@@ -133,11 +141,13 @@ public class IndexServlet extends HttpServlet {
                      * York site that handles transcripts goes down every now
                      * and then after midnight for a few hours
                      */
-                    request.setAttribute("ERROR_MSG", "Looks like the York site is down");
+                    request.setAttribute("ERROR_MSG", "Looks like the York " +
+                                         "site is down");
                     response.sendError(HttpServletResponse.SC_BAD_GATEWAY);
                 }
                 else if (ERROR_MSG.startsWith(E2)) {
-                    request.setAttribute("ERROR_MSG", "Login failed - incorrect username or password");
+                    request.setAttribute("ERROR_MSG", "Login failed - " +
+                                         "incorrect username or password");
                     response.sendError(HttpServletResponse.SC_UNAUTHORIZED);
                 }
 
@@ -149,7 +159,8 @@ public class IndexServlet extends HttpServlet {
             }
         }
 
-        RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher(forwardPath);
+        RequestDispatcher dispatcher = this.getServletContext()
+                                           .getRequestDispatcher(forwardPath);
         dispatcher.forward(request, response);
     }
 }

@@ -37,7 +37,8 @@ public class Parser {
      * @return Student with name, program, and courses set
      * @throws Exception On HTML format issues
      */
-    public Student processStudentDocs(Document docTranscript, Document docProgram) throws Exception {
+    public Student processStudentDocs(Document docTranscript,
+                                      Document docProgram) throws Exception {
         int numTokens;
         StringTokenizer tokenizer;
         Student student = new Student();
@@ -67,15 +68,20 @@ public class Parser {
                 course.setTerm(elements.get(0).text().trim());
 
                 // Strip junk
-                tokenizer = new StringTokenizer(elements.get(1).text().replaceAll("[^a-zA-Z\\d+.]", " "), " ");
+                String str = elements.get(1)
+                                     .text()
+                                     .replaceAll("[^a-zA-Z\\d+.]", " ");
+
+                tokenizer = new StringTokenizer(str, " ");
                 numTokens = tokenizer.countTokens();
 
                 if (numTokens != MIN_COURSE_TOKENS) {
                     /*
-                     * TODO: If we find a bad course, log it and notify the view
-                     * 	     but keep going
+                     * TODO: If we find a bad course, log it and notify the
+                     *       view but keep going
                      */
-                    throw new Exception("TRANSCRIPT - COURSE TOKEN - Format Error");
+                    throw new Exception("TRANSCRIPT - COURSE TOKEN - Format " +
+                                        "Error");
                 }
 
                 course.setFaculty(tokenizer.nextToken());
@@ -104,7 +110,8 @@ public class Parser {
     ///////////////////////////////////////////////////////////////////////////
 
 
-    private Student processProgram(Document doc, Student student) throws Exception {
+    private Student processProgram(Document doc,
+                                   Student student) throws Exception {
         /*
          * TODO: On any format issue, could just log and notify the view.
          *       However, Calculator class requires student program.

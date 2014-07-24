@@ -49,7 +49,9 @@ public class NINJA {
      * @throws HttpStatusException HTTP related issues on login and scraping
      * @throws Exception HTML format related issues
      */
-    public Student compute(String username, String password) throws HttpStatusException, Exception {
+    public Student compute(String username,
+                           String password) throws Exception,
+                                                   HttpStatusException {
         Student student = null;
 
         ArrayList<Document> docs = scraper.getDocs(username, password);

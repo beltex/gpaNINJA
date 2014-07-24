@@ -1,4 +1,4 @@
-package junit;
+package model;
 
 import static org.junit.Assert.*;
 import model.Parser;
