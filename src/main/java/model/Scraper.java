@@ -92,9 +92,11 @@ public class Scraper {
      * @param password Max 8 characters
      * @return ArrayList of Documents, the transcript and major HTML pages
      * @throws HttpStatusException On any HTTP related exception, we catch and
-     * 		   					   throw this.
+     *                             throw this.
      */
-    public ArrayList<Document> getDocs(String username, String password) throws HttpStatusException {
+    public ArrayList<Document> getDocs(String username,
+                                       String password) throws
+                                                        HttpStatusException {
         Response res = null;
         ArrayList<Document> docs = new ArrayList<Document>();
 
