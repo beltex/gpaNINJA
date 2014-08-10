@@ -7,6 +7,7 @@ computing GPA in one click for a seamless UX. Provides additional stats such
 as GPA on a 4.0 scale and major specific stats (LE supported for this only
 currently).
 
+
 ### Why?
 
 There currently are no automatic GPA calculators for York. The school servers 
@@ -16,6 +17,7 @@ mention the stats disappear once the next semester starts, in addition to
 limited progress information. The only GPA calculators that are York specific 
 require manual input of grades, tedious to say the least, and error prone. 
 [Example](http://www.yorku.ca/laps/students/gpa.html)
+
 
 ### Privacy & Use
 
@@ -29,7 +31,6 @@ COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-This project is under the **MIT License**. See ```LICENSE``` for more.
 
 ### Tech Stack
 
@@ -41,17 +42,20 @@ This project is under the **MIT License**. See ```LICENSE``` for more.
 - [Gradle](http://www.gradle.org) (2.0)
     - [Gradle CSS Plugin](https://github.com/eriwen/gradle-css-plugin)
 
+
 ### Live Instance
 
 https://red.cse.yorku.ca:8443/gpaNINJA/
 
 NOTE: The SSL certificate is self-signed, thus you will get a browser warning.
 
+
 ### Why is it called that?
 
 It was my understanding that some unwritten rule existed among hackers in which 
 project names are suffixed with 'NINJA', when a better name ceases to exist. 
 Apparently, I'm the only one who's heard of this. :)
+
 
 ## Setup
 
@@ -136,5 +140,11 @@ To force HTTPS, in **web.xml**, add the following
 ```
 
 For more, see:
+
 - http://stackoverflow.com/a/7793684
 - http://andyarismendi.blogspot.ca/2012/01/changing-tomcats-ca-trust-keystore-file.html
+
+
+### License
+
+This project is under the **GNU General Public License v2.0**.
