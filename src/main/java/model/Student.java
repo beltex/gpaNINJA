@@ -121,9 +121,9 @@ public class Student {
 
 
     /**
-     * OLSAS GPA points
+     * OUAC GPA points (4.0 scale)
      */
-    private double gpaPointsOLSAS;
+    private double gpaPointsOUAC;
 
 
     /**
@@ -133,9 +133,9 @@ public class Student {
 
 
     /**
-     * GPA on 4.0 scale
+     * OUAC GPA (4.0 scale)
      */
-    private double gpa_OLSAS;
+    private double gpaOUAC;
 
 
     /**
@@ -237,13 +237,13 @@ public class Student {
     }
 
 
-    public double getGpaPointsOLSAS() {
-        return gpaPointsOLSAS;
+    public double getGpaPointsOUAC() {
+        return gpaPointsOUAC;
     }
 
 
-    public double getGpa_OLSAS() {
-        return gpa_OLSAS;
+    public double getGpaOUAC() {
+        return gpaOUAC;
     }
 
 
@@ -312,13 +312,13 @@ public class Student {
     }
 
 
-    public void setGpaPointsOLSAS(double gpaPointsOLSAS) {
-        this.gpaPointsOLSAS = gpaPointsOLSAS;
+    public void setGpaPointsOUAC(double gpaPointsOUAC) {
+        this.gpaPointsOUAC = gpaPointsOUAC;
     }
 
 
-    public void setGpa_OLSAS(double gpa_OLSAS) {
-        this.gpa_OLSAS = gpa_OLSAS;
+    public void setGpaOUAC(double gpaOUAC) {
+        this.gpaOUAC = gpaOUAC;
     }
 
 

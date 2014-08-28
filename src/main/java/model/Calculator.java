@@ -51,12 +51,12 @@ public class Calculator {
 
 
     /**
-     * For 4.0 scale - same as OMSAS
+     * Mapping from York GPA to 4.0 GPA scale - OLSAS/OMSAS 2015
      *
      * http://www.ouac.on.ca/docs/olsas/c_olsas_b.pdf
      * http://www.ouac.on.ca/docs/omsas/c_omsas_b.pdf
      */
-    private final HashMap<String, Double> OLSAS_2014;
+    private final HashMap<String, Double> OUAC;
 
 
     ///////////////////////////////////////////////////////////////////////////
@@ -96,17 +96,17 @@ public class Calculator {
         YORK_GRADES_SPECIAL.add("\u00A0"); // Non-break space, waiting on grade
         YORK_GRADES_SPECIAL.add("in progress");
 
-        OLSAS_2014 = new HashMap<String, Double>();
-        OLSAS_2014.put("A+", 4.0);
-        OLSAS_2014.put("A", 3.8);
-        OLSAS_2014.put("B+", 3.3);
-        OLSAS_2014.put("B", 3.0);
-        OLSAS_2014.put("C+", 2.3);
-        OLSAS_2014.put("C", 2.0);
-        OLSAS_2014.put("D+", 1.3);
-        OLSAS_2014.put("D", 1.0);
-        OLSAS_2014.put("E", 0.0);
-        OLSAS_2014.put("F", 0.0);
+        OUAC = new HashMap<String, Double>();
+        OUAC.put("A+", 4.0);
+        OUAC.put("A", 3.8);
+        OUAC.put("B+", 3.3);
+        OUAC.put("B", 3.0);
+        OUAC.put("C+", 2.3);
+        OUAC.put("C", 2.0);
+        OUAC.put("D+", 1.3);
+        OUAC.put("D", 1.0);
+        OUAC.put("E", 0.0);
+        OUAC.put("F", 0.0);
     }
 
 
@@ -129,7 +129,7 @@ public class Calculator {
         double creditsPassFailCourse = 0.0;     // Not part of GPA
 
         double gpaPoints = 0.0;       // Used in conjunction with creditsPassed
-        double gpaPointsOLSAS = 0.0;
+        double gpaPointsOUAC = 0.0;
 
         for (Course course : courseList) {
             String grade = course.getGrade();
@@ -143,7 +143,7 @@ public class Calculator {
 
                     creditsPassed += creditsCourse;
                     gpaPoints += gradeValue * creditsCourse;
-                    gpaPointsOLSAS += OLSAS_2014.get(grade) * creditsCourse;
+                    gpaPointsOUAC += OUAC.get(grade) * creditsCourse;
                 }
                 else if (gradeValue == YORK_GRADES.get("P")) {
                     /*
@@ -191,8 +191,8 @@ public class Calculator {
         s.setCreditsPassed(creditsPassed + creditsPassFailCourse);
         s.setCreditsFailed(creditsFailed);
         s.setGpaPoints(gpaPoints);
-        s.setGpaPointsOLSAS(gpaPointsOLSAS);
-        s.setGpa_OLSAS(gpaPointsOLSAS/creditsPassed);
+        s.setGpaPointsOUAC(gpaPointsOUAC);
+        s.setGpaOUAC(gpaPointsOUAC/creditsPassed);
         s.setGpa(gpaPoints/creditsPassed);
 
         // Temp solution for program specific stats
