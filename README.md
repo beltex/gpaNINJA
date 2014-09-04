@@ -40,7 +40,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 - [jsoup](http://jsoup.org) (1.7.3)
 - [JUnit](http://junit.org) (4.11)
 - [Gradle](http://www.gradle.org) (2.0)
-    - [Gradle CSS Plugin](https://github.com/eriwen/gradle-css-plugin)
+    - [Gradle CSS Plugin](https://github.com/eriwen/gradle-css-plugin) (1.11.1)
 
 
 ### Live Instance
