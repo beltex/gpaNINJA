@@ -39,15 +39,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 - [Bootstrap](http://getbootstrap.com) (3.2.0)
 - [jsoup](http://jsoup.org) (1.7.3)
 - [JUnit](http://junit.org) (4.11)
-- [Gradle](http://www.gradle.org) (2.0)
+- [Gradle](http://www.gradle.org) (2.1)
     - [Gradle CSS Plugin](https://github.com/eriwen/gradle-css-plugin) (1.11.1)
-
-
-### Live Instance
-
-https://red.cse.yorku.ca:8443/gpaNINJA/
-
-NOTE: The SSL certificate is self-signed, thus you will get a browser warning.
 
 
 ### Why is it called that?
