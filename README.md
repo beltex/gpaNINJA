@@ -43,13 +43,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     - [Gradle CSS Plugin](https://github.com/eriwen/gradle-css-plugin) (1.11.1)
 
 
-### Why is it called that?
-
-It was my understanding that some unwritten rule existed among hackers in which 
-project names are suffixed with 'NINJA', when a better name ceases to exist. 
-Apparently, I'm the only one who's heard of this. :)
-
-
 ## Setup
 
 **Gradle**
